@@ -1,3 +1,5 @@
+This Read Me Guide Edited By Chad Buie
+
 == README
 
 This README would normally document whatever steps are necessary to get the
