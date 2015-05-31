@@ -1,16 +1,16 @@
 class InitialSchema < ActiveRecord::Migration
   def change
 
-   create_table(:categories) do |t|
+   create_table :categories do |t|
      t.string :name
    end
    
-   create_table(:subcategories) do |t|
+   create_table :subcategories do |t|
      t.string :name
-     t.interger :catgory_id
+     t.integer :catgory_id
    end
    
-   create_table(:listings) do |t|
+   create_table :listings do |t|
      t.string :name
      t.text :description
      t.string :city
@@ -20,7 +20,7 @@ class InitialSchema < ActiveRecord::Migration
      t.timestamps
    end
    
-   create_table(:seotags) do |t|
+   create_table :seotags do |t|
      t.string :title
      t.text :description
      t.text :metadescription
@@ -34,7 +34,5 @@ class InitialSchema < ActiveRecord::Migration
      t.timestamps
    end
      
-
-
   end
 end
