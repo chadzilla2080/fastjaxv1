@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   # This is for the home page
   root 'categories#index'
   
