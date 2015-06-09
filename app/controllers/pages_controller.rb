@@ -1,6 +1,12 @@
 class PagesController < ApplicationController
 
-def help
+def about
+end
+
+def freelisting
+end
+
+def contact
 end
 
 end

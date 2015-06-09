@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20150601041615) do
 
   create_table "subcategories", force: true do |t|
     t.string  "name"
-    t.integer "catgory_id"
+    t.integer "category_id"
   end
 
   create_table "users", force: true do |t|

@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   root 'categories#index'
   
   # matches the pages controller to the help link or action on the home page 
-  match '/help', to: 'pages#help', via: :get 
+  match '/about', to: 'pages#about', via: :get
+  match '/contact', to: 'pages#contact', via: :get 
+  match '/freelisting', to: 'pages#freelisting', via: :get 
+
 
 end
