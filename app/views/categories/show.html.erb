@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+         <div class="col-md-12">
+                <center>
+                <%= image_tag("fastjax.jpg", class: "img-responsive") %>
+                <center>
+          </div>
+    </div>
+        <div class="row">
+          <div class="col-md-12">
+                <ul class="list-margin">
+                    <% if @listings.present? %>
+                          <% @listings.each do |listing| %>
+                              <li>
+                                <span>
+                                  <%= listing.created_at.strftime('%B %d, %Y') %>
+                                </span> 
+                                <%= link_to listing.title, listing %> - (<%= listing.city %>, <%= listing.state %>)
+                               </li>
+                    <% end %>
+                          <% else %>
+                             <p>No listings found!</>
+                    <% end %>
+                </ul>
+        </div>
+    </div>
+</div>
+
