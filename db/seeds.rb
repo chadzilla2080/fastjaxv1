@@ -8,7 +8,7 @@
 
 air_conditioning_category = Category.where(name: 'Air Conditioning').first_or_create(name: 'Air Conditioning')
 boutiques_category = Category.where(name: 'Boutiques').first_or_create(name: 'Boutiques')
-bakeries_category = Category.where(name: 'Bakeries').first_or_create(name: '')
+bakeries_category = Category.where(name: 'Bakeries').first_or_create(name: 'Bakeries')
 body_shops_category = Category.where(name: 'Body Shops').first_or_create(name: 'Body Shops')
 beauty_shops_category = Category.where(name: 'Beauty Shops').first_or_create(name: 'Beauty Shops')
 beer_boutiques_category = Category.where(name: 'Beer Boutiques').first_or_create(name: 'Beer Boutiques')
@@ -30,7 +30,7 @@ movie_cinema_events_category = Category.where(name: 'Movie Cinema Events').first
 music_events_category = Category.where(name: 'Music Events').first_or_create(name: 'Music Events')
 music_halls_category = Category.where(name: 'Music Halls').first_or_create(name: 'Music Halls')
 museums_category = Category.where(name: 'Museums').first_or_create(name: 'Museums')
-night_clubs_category = Category.where(name 'Night Club').first_or_create(name: 'Night Clubs')
+night_clubs_category = Category.where(name: 'Night Club').first_or_create(name: 'Night Clubs')
 pet_day_care_category = Category.where(name: 'Pet Day Care').first_or_create(name: 'Pet Day Care')
 pet_health_care_category = Category.where(name: 'Pet Health Care').first_or_create(name: 'Pet Health Care')
 pet_parks_category = Category.where(name: 'Pet Parks').first_or_create(name: 'Pet Parks')
