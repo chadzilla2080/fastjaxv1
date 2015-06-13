@@ -15,6 +15,4 @@ Rails.application.routes.draw do
   match '/about', to: 'pages#about', via: :get
   match '/contact', to: 'pages#contact', via: :get 
   match '/freelisting', to: 'pages#freelisting', via: :get 
-
-
-end
+  end
