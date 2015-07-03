@@ -1,4 +1,4 @@
-  # This file should contain all the record creation needed to seed the database with its default values.
+    # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
@@ -52,9 +52,15 @@ yachts_category = Category.where(name: 'Yachts').first_or_create(name: 'Yachts')
 
  
 Subcategory.where(name: 'HVAC', category_id: air_conditioning_category.id).first_or_create(name: 'HVAC', category_id: air_conditioning_category.id)
+
 Subcategory.where(name: 'Pet Boutiques', category_id: pet_stores_category.id).first_or_create(name: 'Pet Boutiques', category_id: pet_stores_category.id)
+
 Subcategory.where(name: 'Realtors', category_id: real_estate_category.id).first_or_create(name: 'Realtors', category_id: real_estate_category.id)
+
 Subcategory.where(name: 'Apartment Rentals', category_id: real_estate_category.id).first_or_create(name: 'Apartment Rentals', category_id: real_estate_category.id)
+
 Subcategory.where(name: 'Home Rentals', category_id: real_estate_category.id).first_or_create(name: 'Home Rentals', category_id: real_estate_category.id)
+
 Subcategory.where(name: 'Homes For Sale', category_id: real_estate_category.id).first_or_create(name: 'Homes For Sale', category_id: real_estate_category.id)
+
 Subcategory.where(name: 'Real Estate Deals', category_id: real_estate_category.id).first_or_create(name: 'Real Estate Deals', category_id: real_estate_category.id)

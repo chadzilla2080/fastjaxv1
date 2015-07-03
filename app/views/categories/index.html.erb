@@ -1,20 +1,32 @@
-<div class="container-fluid">
-    <div class="row">
-         <div class="col-md-12">
-                <center>
+ <div class="container">
+     <div class="row">
+          <div class="col-md-12, col-md-offset-3">
                 <%= image_tag("fastjax.jpg", class: "img-responsive") %>
-                <center>
-          </div>
-    </div>
-        <div class="row">
-          <div class="col-md-1">
-               <%= link_to 'Air Conditioning', category_path(@air_conditioning_category) %>
-          </div>
-          <div class="col-md-1">
-                <%= link_to 'Boutiques', category_path(@boutiques_category) %>
-          </div>
-          <div class="col-md-1">
-               <%= link_to 'Bakeries', category_path(@bakeries_category) %>
-          </div>
-    </div>
+                <br />
+                <br />
+           </div>
+     </div>
 </div>
+<div class="container">
+     <div class="row h3">
+          <div class="col-md-3 col-md-offset-1">
+               <center><%= link_to 'Air Conditioning' %></center>  
+               <div class="row h6">
+                     <table class="table table-striped">
+                            <tr>
+                                <td>
+                                  <% @air_conditioning.subcategories.each do |subcategory| %>
+                                     <ul>
+                                       <li><%= link_to subcategory.name %></li>
+                                     </ul>
+                                  <% end %>
+                                </td>
+                            </tr>
+                    </table>
+               </div>
+          </div>
+     </div>
+</div>
+     
+
+
