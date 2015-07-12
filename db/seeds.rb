@@ -6,7 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+activities_category = Category.where(name: 'Activities').first_or_create(name: 'Activities')
+advertising_firms_category = Category.where(name: 'Advertising Firm').first_or_create(name: 'Advertising Firm')
 air_conditioning_category = Category.where(name: 'Air Conditioning').first_or_create(name: 'Air Conditioning')
+arts_category = Category.where(name: 'Arts').first_or_create(name: 'Arts')
+airport_category = Category.where(name: 'Airport').first_or_create(name: 'Airport')
 boutiques_category = Category.where(name: 'Boutiques').first_or_create(name: 'Boutiques')
 bakeries_category = Category.where(name: 'Bakeries').first_or_create(name: 'Bakeries')
 body_shops_category = Category.where(name: 'Body Shops').first_or_create(name: 'Body Shops')
@@ -18,7 +22,9 @@ comdey_clubs_category = Category.where(name: 'Comdey Clubs').first_or_create(nam
 cleaning_service_category = Category.where(name: 'Cleaning Services').first_or_create(name: 'Cleaning Services')
 drink_specials_category = Category.where(name: 'Drink Specials').first_or_create(name: 'Drink Specials')
 flea_markets_category = Category.where(name: 'Flea Markets').first_or_create(name: 'Flea Markets')
+housing_category = Category.where(name: 'Housing').first_or_create(name: 'Housing')
 health_category = Category.where(name: 'Health').first_or_create(name: 'Health')
+human_services_category = Category.where(name: 'Human Services').first_or_create(name: 'Human Services')
 internet_services_category = Category.where(name: 'Internet Services').first_or_create(name: 'Internet Services')
 jewelry_category = Category.where(name: 'Jewelry').first_or_create(name: 'Jewelry')
 legal_category = Category.where(name: 'Legal').first_or_create(name: 'Legal')
@@ -31,6 +37,7 @@ music_events_category = Category.where(name: 'Music Events').first_or_create(nam
 music_halls_category = Category.where(name: 'Music Halls').first_or_create(name: 'Music Halls')
 museums_category = Category.where(name: 'Museums').first_or_create(name: 'Museums')
 night_clubs_category = Category.where(name: 'Night Club').first_or_create(name: 'Night Clubs')
+public_awareness_category = Category.where(name: 'Public Awareness').first_or_create(name: 'Public Awareness') 
 pet_day_care_category = Category.where(name: 'Pet Day Care').first_or_create(name: 'Pet Day Care')
 pet_health_care_category = Category.where(name: 'Pet Health Care').first_or_create(name: 'Pet Health Care')
 pet_parks_category = Category.where(name: 'Pet Parks').first_or_create(name: 'Pet Parks')
@@ -50,17 +57,63 @@ storage_facilities_category = Category.where(name: 'Storage Facility').first_or_
 theather_category = Category.where(name: 'Theathers').first_or_create(name: 'Theathers')
 yachts_category = Category.where(name: 'Yachts').first_or_create(name: 'Yachts')
 
- 
-Subcategory.where(name: 'HVAC', category_id: air_conditioning_category.id).first_or_create(name: 'HVAC', category_id: air_conditioning_category.id)
+
+Subcategory.where(name: 'Air Conditioner', category_id: air_conditioning_category.id).first_or_create(name: 'Air Conditioner', category_id: air_conditioning_category.id)
+Subcategory.where(name: 'Air Conditioning Installation', category_id: air_conditioning_category.id).first_or_create(name: 'Air Conditioning Installation', category_id: air_conditioning_category.id)
+Subcategory.where(name: 'Air Conditioning Replacement', category_id: air_conditioning_category.id).first_or_create(name: 'Air Conditioning Replacement', category_id: air_conditioning_category.id)
+Subcategory.where(name: 'Air Conditioning Repair', category_id: air_conditioning_category.id).first_or_create(name: 'Air Conditioning Repair', category_id: air_conditioning_category.id)
+Subcategory.where(name: 'Air Conidtioner Units', category_id: air_conditioning_category.id).first_or_create(name: 'Air Conidtioner Units', category_id: air_conditioning_category.id)
+Subcategory.where(name: 'Heat Pumps', category_id: air_conditioning_category.id).first_or_create(name: 'Heat Pumps', category_id: air_conditioning_category.id)
+Subcategory.where(name: 'Commercial HVAC', category_id: air_conditioning_category.id).first_or_create(name: 'Commercial HVAC', category_id: air_conditioning_category.id)
+Subcategory.where(name: 'Industrial HVAC', category_id: air_conditioning_category.id).first_or_create(name: 'Industrial HVAC', category_id: air_conditioning_category.id)
+Subcategory.where(name: 'Residential HVAC', category_id: air_conditioning_category.id).first_or_create(name: 'Residential HVAC', category_id: air_conditioning_category.id)
+
+Subcategory.where(name: 'Agencies', category_id: human_services_category.id).first_or_create(name: 'Agencies', category_id: human_services_category.id)
+Subcategory.where(name: 'Alcoholism Treatment', category_id: human_services_category.id).first_or_create(name: 'Alcoholism Treatment', category_id: human_services_category.id)
+Subcategory.where(name: 'Anexity Counseling', category_id: human_services_category.id).first_or_create(name: 'Anexity Counseling', category_id: human_services_category.id)
+Subcategory.where(name: 'Substance Abuse Counseling', category_id: human_services_category.id).first_or_create(name: 'Substance Abuse Counseling', category_id: human_services_category.id)
 
 Subcategory.where(name: 'Pet Boutiques', category_id: pet_stores_category.id).first_or_create(name: 'Pet Boutiques', category_id: pet_stores_category.id)
 
-Subcategory.where(name: 'Realtors', category_id: real_estate_category.id).first_or_create(name: 'Realtors', category_id: real_estate_category.id)
+Subcategory.where(name: 'Assitance', category_id: public_awareness_category.id).first_or_create(name: 'Assitance', category_id: public_awareness_category.id)
+Subcategory.where(name: 'Breast Cancer', category_id: public_awareness_category.id).first_or_create(name: 'Breast Cancer', category_id: public_awareness_category.id)
+Subcategory.where(name: 'Crimes', category_id: public_awareness_category.id).first_or_create(name: 'Crimes', category_id: public_awareness_category.id)
+Subcategory.where(name: 'Heart Diease', category_id: public_awareness_category.id).first_or_create(name: 'Heart Diease', category_id: public_awareness_category.id)
+Subcategory.where(name: 'Natural Diasters', category_id: public_awareness_category.id).first_or_create(name: 'Natural Diasters', category_id: public_awareness_category.id)
+Subcategory.where(name: 'Smoking', category_id: public_awareness_category.id).first_or_create(name: 'Smoking', category_id: public_awareness_category.id)
 
 Subcategory.where(name: 'Apartment Rentals', category_id: real_estate_category.id).first_or_create(name: 'Apartment Rentals', category_id: real_estate_category.id)
-
 Subcategory.where(name: 'Home Rentals', category_id: real_estate_category.id).first_or_create(name: 'Home Rentals', category_id: real_estate_category.id)
-
 Subcategory.where(name: 'Homes For Sale', category_id: real_estate_category.id).first_or_create(name: 'Homes For Sale', category_id: real_estate_category.id)
-
+Subcategory.where(name: 'Realtors', category_id: real_estate_category.id).first_or_create(name: 'Realtors', category_id: real_estate_category.id)
 Subcategory.where(name: 'Real Estate Deals', category_id: real_estate_category.id).first_or_create(name: 'Real Estate Deals', category_id: real_estate_category.id)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

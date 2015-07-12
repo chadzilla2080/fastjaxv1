@@ -25,6 +25,38 @@
                     </table>
                </div>
           </div>
+          <div class="col-md-3 col-md-offset-1">
+               <center><%= link_to 'Air Conditioning' %></center>  
+               <div class="row h6">
+                     <table class="table table-striped">
+                            <tr>
+                                <td>
+                                  <% @air_conditioning.subcategories.each do |subcategory| %>
+                                     <ul>
+                                       <li><%= link_to subcategory.name %></li>
+                                     </ul>
+                                  <% end %>
+                                </td>
+                            </tr>
+                    </table>
+               </div>
+          </div>
+          <div class="col-md-3 col-md-offset-1">
+               <center><%= link_to 'Air Conditioning' %></center>  
+               <div class="row h6">
+                     <table class="table table-striped">
+                            <tr>
+                                <td>
+                                  <% @air_conditioning.subcategories.each do |subcategory| %>
+                                     <ul>
+                                       <li><%= link_to subcategory.name %></li>
+                                     </ul>
+                                  <% end %>
+                                </td>
+                            </tr>
+                    </table>
+               </div>
+          </div>
      </div>
 </div>
      
