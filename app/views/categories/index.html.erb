@@ -26,12 +26,12 @@
                </div>
           </div>
           <div class="col-md-3 col-md-offset-1">
-               <center><%= link_to 'Air Conditioning' %></center>  
+               <center><%= link_to 'Human Services' %></center>  
                <div class="row h6">
                      <table class="table table-striped">
                             <tr>
                                 <td>
-                                  <% @human_services_category.subcategories.each do |subcategory| %>
+                                  <% @human_services.subcategories.each do |subcategory| %>
                                      <ul>
                                        <li><%= link_to subcategory.name %></li>
                                      </ul>
@@ -42,12 +42,12 @@
                </div>
           </div>
           <div class="col-md-3 col-md-offset-1">
-               <center><%= link_to 'Air Conditioning' %></center>  
+               <center><%= link_to 'Real Estate' %></center>  
                <div class="row h6">
                      <table class="table table-striped">
                             <tr>
                                 <td>
-                                  <% @real_estate_category.subcategories.each do |subcategory| %>
+                                  <% @real_estate.subcategories.each do |subcategory| %>
                                      <ul>
                                        <li><%= link_to subcategory.name %></li>
                                      </ul>
