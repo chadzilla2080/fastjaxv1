@@ -1,22 +1,14 @@
-    # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 activities_category = Category.where(name: 'Activities').first_or_create(name: 'Activities')
 advertising_firms_category = Category.where(name: 'Advertising Firm').first_or_create(name: 'Advertising Firm')
 air_conditioning_category = Category.where(name: 'Air Conditioning').first_or_create(name: 'Air Conditioning')
-arts_category = Category.where(name: 'Arts').first_or_create(name: 'Arts')
 airport_category = Category.where(name: 'Airport').first_or_create(name: 'Airport')
-boutiques_category = Category.where(name: 'Boutiques').first_or_create(name: 'Boutiques')
+arts_category = Category.where(name: 'Arts').first_or_create(name: 'Arts')
 bakeries_category = Category.where(name: 'Bakeries').first_or_create(name: 'Bakeries')
-body_shops_category = Category.where(name: 'Body Shops').first_or_create(name: 'Body Shops')
+bars_category = Category.where(name: 'Bars').first_or_create(name: 'Bars')
 beauty_shops_category = Category.where(name: 'Beauty Shops').first_or_create(name: 'Beauty Shops')
 beer_boutiques_category = Category.where(name: 'Beer Boutiques').first_or_create(name: 'Beer Boutiques')
-bars_category = Category.where(name: 'Bars').first_or_create(name: 'Bars')
+body_shops_category = Category.where(name: 'Body Shops').first_or_create(name: 'Body Shops')
+boutiques_category = Category.where(name: 'Boutiques').first_or_create(name: 'Boutiques')
 candy_store_category = Category.where(name: 'Candy Store').first_or_create(name: 'Candy Store')
 comdey_clubs_category = Category.where(name: 'Comdey Clubs').first_or_create(name: 'Comdey Clubs')
 cleaning_service_category = Category.where(name: 'Cleaning Services').first_or_create(name: 'Cleaning Services')
@@ -57,6 +49,13 @@ storage_facilities_category = Category.where(name: 'Storage Facility').first_or_
 theather_category = Category.where(name: 'Theathers').first_or_create(name: 'Theathers')
 yachts_category = Category.where(name: 'Yachts').first_or_create(name: 'Yachts')
 
+Subcategory.where(name: 'Computer Study', category_id: activities_category.id).first_or_create(name: 'Computer Study', category_id: activities_category.id)
+Subcategory.where(name: 'Intermurals', category_id: activities_category.id).first_or_create(name: 'Intermurals', category_id: activities_category.id)
+Subcategory.where(name: 'Meetups', category_id: activities_category.id).first_or_create(name: 'Meetups', category_id: activities_category.id)
+
+Subcategory.where(name: 'Ads', category_id: advertising_firms_category.id).first_or_create(name: 'Ads', category_id: advertising_firms_category.id)
+Subcategory.where(name: 'Packages', category_id: advertising_firms_category.id).first_or_create(name: 'Packages', category_id: advertising_firms_category.id)
+Subcategory.where(name: 'Press Releases', category_id: advertising_firms_category.id).first_or_create(name: 'Press Releases', category_id: advertising_firms_category.id)
 
 Subcategory.where(name: 'Air Conditioner', category_id: air_conditioning_category.id).first_or_create(name: 'Air Conditioner', category_id: air_conditioning_category.id)
 Subcategory.where(name: 'Air Conditioning Installation', category_id: air_conditioning_category.id).first_or_create(name: 'Air Conditioning Installation', category_id: air_conditioning_category.id)
@@ -68,12 +67,40 @@ Subcategory.where(name: 'Commercial HVAC', category_id: air_conditioning_categor
 Subcategory.where(name: 'Industrial HVAC', category_id: air_conditioning_category.id).first_or_create(name: 'Industrial HVAC', category_id: air_conditioning_category.id)
 Subcategory.where(name: 'Residential HVAC', category_id: air_conditioning_category.id).first_or_create(name: 'Residential HVAC', category_id: air_conditioning_category.id)
 
+Subcategory.where(name: 'Food', category_id: airport_category.id).first_or_create(name: 'Food', category_id: airport_category.id)
+Subcategory.where(name: 'Hotels', category_id: airport_category.id).first_or_create(name: 'Hotels', category_id: airport_category.id)
+Subcategory.where(name: 'Parking', category_id: airport_category.id).first_or_create(name: 'Parking', category_id: airport_category.id)
+Subcategory.where(name: 'Restaurants', category_id: airport_category.id).first_or_create(name: 'Restaurants', category_id: airport_category.id)
+Subcategory.where(name: 'Shopping', category_id: airport_category.id).first_or_create(name: 'Shopping', category_id: airport_category.id)
+
+Subcategory.where(name: 'Art Walk', category_id: arts_category.id).first_or_create(name: 'Art Walk', category_id: arts_category.id)
+Subcategory.where(name: 'Art Museums', category_id: arts_category.id).first_or_create(name: 'Art Museums', category_id: arts_category.id)
+Subcategory.where(name: 'History Museums', category_id: arts_category.id).first_or_create(name: 'History Museums', category_id: arts_category.id)
+
+Subcategory.where(name: 'Breads', category_id: bakeries_category.id).first_or_create(name: 'Breads', category_id: bakeries_category.id)
+Subcategory.where(name: 'Cakes', category_id: bakeries_category.id).first_or_create(name: 'Cakes', category_id: bakeries_category.id)
+Subcategory.where(name: 'Catering', category_id: bakeries_category.id).first_or_create(name: 'Catering', category_id: bakeries_category.id)
+Subcategory.where(name: 'Cookies', category_id: bakeries_category.id).first_or_create(name: 'Cookies', category_id: bakeries_category.id)
+Subcategory.where(name: 'Cup Cakes', category_id: bakeries_category.id).first_or_create(name: 'Cup Cakes', category_id: bakeries_category.id)
+Subcategory.where(name: 'Donuts', category_id: bakeries_category.id).first_or_create(name: 'Donuts', category_id: bakeries_category.id)
+
+Subcategory.where(name: 'Club Specials', category_id: bars_category.id).first_or_create(name: 'Club Specials', category_id: bars_category.id)
+Subcategory.where(name: 'Drink Specials', category_id: bars_category.id).first_or_create(name: 'Drink Specials', category_id: bars_category.id)
+Subcategory.where(name: 'Happy Hour', category_id: bars_category.id).first_or_create(name: 'Happy Hour', category_id: bars_category.id)
+Subcategory.where(name: 'Ladies Night', category_id: bars_category.id).first_or_create(name: 'Ladies Night', category_id: bars_category.id)
+
+Subcategory.where(name: 'Beauty Salons', category_id: beauty_shops_category.id).first_or_create(name: 'Beauty Salons', category_id: beauty_shops_category.id)
+Subcategory.where(name: 'Beauty Stores', category_id: beauty_shops_category.id).first_or_create(name: 'Beauty Stores', category_id: beauty_shops_category.id)
+
 Subcategory.where(name: 'Agencies', category_id: human_services_category.id).first_or_create(name: 'Agencies', category_id: human_services_category.id)
 Subcategory.where(name: 'Alcoholism Treatment', category_id: human_services_category.id).first_or_create(name: 'Alcoholism Treatment', category_id: human_services_category.id)
 Subcategory.where(name: 'Anexity Counseling', category_id: human_services_category.id).first_or_create(name: 'Anexity Counseling', category_id: human_services_category.id)
 Subcategory.where(name: 'Substance Abuse Counseling', category_id: human_services_category.id).first_or_create(name: 'Substance Abuse Counseling', category_id: human_services_category.id)
 
-Subcategory.where(name: 'Pet Boutiques', category_id: pet_stores_category.id).first_or_create(name: 'Pet Boutiques', category_id: pet_stores_category.id)
+Subcategory.where(name: 'Birds', category_id: pet_stores_category.id).first_or_create(name: 'Birds', category_id: pet_stores_category.id)
+Subcategory.where(name: 'Cats', category_id: pet_stores_category.id).first_or_create(name: 'Cats', category_id: pet_stores_category.id)
+Subcategory.where(name: 'Dogs', category_id: pet_stores_category.id).first_or_create(name: 'Dogs', category_id: pet_stores_category.id)
+Subcategory.where(name: 'Fish', category_id: pet_stores_category.id).first_or_create(name: 'Fish', category_id: pet_stores_category.id)
 
 Subcategory.where(name: 'Assitance', category_id: public_awareness_category.id).first_or_create(name: 'Assitance', category_id: public_awareness_category.id)
 Subcategory.where(name: 'Breast Cancer', category_id: public_awareness_category.id).first_or_create(name: 'Breast Cancer', category_id: public_awareness_category.id)
