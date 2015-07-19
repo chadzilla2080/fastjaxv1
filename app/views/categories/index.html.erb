@@ -10,14 +10,14 @@
 <div class="container">
      <div class="row h3">
           <div class="col-md-3 col-md-offset-1">
-               <center><%= link_to 'Activities' %></center>  
+               <center><%= link_to 'Activities', category_path(@activities) %></center>  
                <div class="row h6">
                      <table class="table table-striped">
                             <tr>
                                 <td>
                                   <% @activities.subcategories.each do |subcategory| %>
                                      <ul>
-                                       <li><%= link_to subcategory.name %></li>
+                                       <li><%= link_to subcategory.name, category_subcategory_path(@activities, subcategory) %></li>
                                      </ul>
                                   <% end %>
                                 </td>
