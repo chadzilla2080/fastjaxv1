@@ -1,20 +1,23 @@
-<div class="topbar">
-  <div class="container">
-    <div class="vertical-center">
-      <%= link_to 'Home', root_path %> > <%= link_to @category.name, @category %> > <%= @subcategory.name %>
-      <br />
-      <br />
-    </div>
-  </div>
-</div>
 <div class="container">
-  <ul class="list-margin">
-    <% if @listings.present? %>
-      <% @listings.each do |listing| %>
-
-      <% end %>
-    <% else %>
-      <p>No listings found!</>
-    <% end %>
-  </ul>
+     <div class="row">
+          <div class="col-md-12">
+                <%= link_to 'Home', root_path %> > <%= link_to @category.name, @category %> > <%= @subcategory.name %>
+                <br />
+                <br />
+                <br />
+                <br />
+          </div>
+     </div>
+     <div class="row">
+          <div class="col-md-3 col-md-offset-3">
+               <% if @listings.present? %>
+                     <% @listings.each do |listing| %>
+               <% end %>
+               <% else %>
+                     <p>No listings found!</>
+               <% end %>
+          </div>
+     </div>
 </div>
+
+ 

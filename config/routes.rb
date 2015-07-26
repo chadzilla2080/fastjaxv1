@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :subcategories
   end
   
+  resources :listings
+  
   # This is the login system
   devise_for :users
   

@@ -6,46 +6,42 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-     <div id="row">
-        <div class="col-md-4">
-               <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"><%= link_to 'Home', root_path, :class => "navbar-brand" %></a>
-                    <a class="navbar-brand" href="#"><%= link_to 'About', about_path, :class => "navbar-brand" %></a>
-                    <a class="navbar-brand" href="#"><%= link_to 'Listings', freelisting_path, :class => "navbar-brand" %></a>
-                    <a class="navbar-brand" href="#"><%= link_to 'Contact', contact_path, :class => "navbar-brand" %></a>
-               </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><%= link_to 'Home', root_path, :class => "navbar-brand" %></a>
+          <a class="navbar-brand" href="#"><%= link_to 'About', about_path, :class => "navbar-brand" %></a>
+          <a class="navbar-brand" href="#"><%= link_to 'Listings', new_listing_path, :class => "navbar-brand" %></a>
+          <a class="navbar-brand" href="#"><%= link_to 'Contact', contact_path, :class => "navbar-brand" %></a>
         </div>
-        <div class="col-md-8">
-              <div id="navbar" class="navbar-collapse collapse">
-                      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'navbar-form navbar-right'}) do |f| %>
-                    <div class="row">
-                        <div class="form-group">
-                              <%= f.email_field :email, autofocus: true, :value => "Email", :style => "width: <20q></20q>0px;", class: "form-control" %>
-                        </div>
-                        <div class="form-group">
-                              <%= f.password_field :password, autocomplete: "off", :value => "Password", :style => "width: 200px;", class: "form-control" %>
-                        </div>
-                        <div class="form-group">
-                              <%= f.submit "Sign in", class: 'btn btn-secondary' %>
-                                <% end %>
-                        <div class="form-group">
-                              <%= link_to "Sign Up",  new_registration_path(resource_name), :class => 'btn btn-primary'  %>
-                        </div>
-                        <div class="form-group">
-                              <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-                        </div>
-                    </div>
-              </div><!--/.navbar-collapse -->
-        </div>
-    </div>
-  </nav>
+        <div id="navbar" class="navbar-collapse collapse">
+             <div class="navbar-form navbar-right">
+                  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                  <div class="form-group">
+                       <%= f.email_field :email, autofocus: true, :value => "Email", :style => "width: 150px;", class: "form-control" %>
+                  </div>
+                  <div class="form-group">
+                       <%= f.password_field :password, autocomplete: "off", :value => "Password", :style => "width: 150px;", class: "form-control" %>
+                 </div>
+                 <div class="form-group">
+                      <%= f.submit "Sign in", class: 'btn btn-secondary' %>
+                 </div>
+                 <div class="form-group">
+                      <%= link_to "Sign Up",  new_registration_path(resource_name), :class => 'btn btn-primary'  %>
+                 </div>
+                 <div class="form-group">
+                      <%= link_to "Rest password?", new_password_path(resource_name) %><br />
+                      <% end %>
+                 </div>
+             </div>
+        </div>  
+    </nav>
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

@@ -1,0 +1,26 @@
+<div class="container">
+     <div class="row">
+          <div class="col-md-12">
+                <%= link_to 'Home', root_path %> > 
+                <br />
+                <br />
+                <br />
+                <br />
+          </div>
+     </div>
+     <div class="row">
+          <div class="col-md-12 ">
+                   <% if @listings.present? %>
+                       <% @listings.each do |listing| %>
+                       <li>
+                          <span>
+                               <%= listing.created_at.strftime('%B %d, %Y') %>
+                          </span> 
+                       </li>
+                   <% end %>
+                   <% else %>
+                      <p>No listings found!</>
+                   <% end %>
+          </div>
+     </div>
+</div>

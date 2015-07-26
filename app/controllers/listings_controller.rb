@@ -1,3 +1,27 @@
 class ListingsController < ApplicationController
   
+  def index
+  end
+
+  def new
+    @listings = Listing.new
+  end
+  
+  
+  def create
+    @listings = Listing.new(listings_params)
+    @listings.save
+    redirect_to root_path
+  end
+  
+  def show
+    @listings = Listing.find(params[:id])
+  end
+  
+  private
+  
+  def listings_params
+    params.require(:listings).permit(:name, :description, :city, :state, :zipcode, :sideoftown, :category_id, :subcategory_id)
+  end
+  
 end 

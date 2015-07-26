@@ -1,0 +1,31 @@
+<div class="container">
+     <div class="row">
+          <div class="col-md-12">
+                <%= link_to 'Home', root_path %> > 
+                <br />
+                <br />
+                <br />
+                <br />
+          </div>
+     </div>
+     <div class="row">
+          <div class="col-md-12 ">
+              <%= @listings.name %>
+              <br />
+              <br />
+              <%= @listings.description %>
+              <br />
+              <br />
+              <%= @listings.city %>
+              <br />
+              <br />
+              <%= @listings.state %>
+              <br />
+              <br />
+              <%= @listings.zipcode %>
+              <br />
+              <br />
+              <%= @listings.sideoftown %>
+          </div>
+     </div>
+</div>

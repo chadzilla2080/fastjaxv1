@@ -3,10 +3,12 @@ class PagesController < ApplicationController
 def about
 end
 
-def freelisting
+def listing
 end
 
 def contact
 end
+
+
 
 end
