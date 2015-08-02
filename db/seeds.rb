@@ -114,33 +114,3 @@ Subcategory.where(name: 'Home Rentals', category_id: real_estate_category.id).fi
 Subcategory.where(name: 'Homes For Sale', category_id: real_estate_category.id).first_or_create(name: 'Homes For Sale', category_id: real_estate_category.id)
 Subcategory.where(name: 'Realtors', category_id: real_estate_category.id).first_or_create(name: 'Realtors', category_id: real_estate_category.id)
 Subcategory.where(name: 'Real Estate Deals', category_id: real_estate_category.id).first_or_create(name: 'Real Estate Deals', category_id: real_estate_category.id)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
