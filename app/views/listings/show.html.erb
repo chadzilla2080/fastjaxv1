@@ -4,13 +4,11 @@
                 <%= link_to 'Home', root_path %> > 
                 <br />
                 <br />
-                <br />
-                <br />
           </div>
      </div>
      <div class="row">
           <div class="col-md-12 ">
-              <%= @listings.name %>
+              <h1><%= @listings.name %></h1>
               <br />
               <br />
               <%= @listings.description %>
@@ -26,6 +24,12 @@
               <br />
               <br />
               <%= @listings.sideoftown %>
+              <hr />
+              <br />
+              <b>Category:</b> <%= @listings.id %>
+              <br />
+              <br />
+              <b>Created:</b> <%= time_ago_in_words(@listings.created_at) %>
           </div>
      </div>
 </div>
