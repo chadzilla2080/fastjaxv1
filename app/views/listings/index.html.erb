@@ -1,7 +1,7 @@
 <div class="container">
      <div class="row">
           <div class="col-md-12">
-                <%= link_to 'Home', root_path %> > 
+                <%= link_to 'Home', root_path %> > Recent Listings
                 <br />
                 <br />
                 <br />
@@ -9,21 +9,22 @@
           </div>
      </div>
      <div class="row">
-          <div class="col-md-12 ">
-      <ul class="list-margin">
-                    <% if @listings.present? %>
-                          <% @listings.each do |listing| %>
-                              <li>
-                                <span>
-                                  <%= listing.created_at.strftime('%B %d, %Y') %>
-                                </span> 
-                                <%= link_to listing.title, listing %> - (<%= listing.city %>, <%= listing.state %>)
+         <div class="col-md-12">
+              <ul class="list-margin">
+                  <% if @listings.present? %>
+                        <% @listings.each do |listing| %>
+                           <li>
+                              <span>
+                                <%= listing.created_at.strftime('%B %d, %Y') %>
+                              </span> 
+                                <%= link_to listing.name, listing %> - (<%= listing.city %>, <%= listing.state %>)
                                </li>
+                               <br />
                     <% end %>
                           <% else %>
-                             <p>Hi There Are No Listings To Be Found!</>
+                             <p>There Are No Listings To Be Found!</>
                     <% end %>
                 </ul>
-          </div>
+        </div>
      </div>
 </div>

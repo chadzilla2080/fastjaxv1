@@ -1,20 +1,20 @@
-<div class="container-fluid">
+<div class="container">
     <div class="row">
          <div class="col-md-12">
-                <center>
-                <%= image_tag("fastjax.jpg", class: "img-responsive") %>
-                <center>
+                <%= link_to 'Home', root_path %> > <%= link_to @category.name %>
+                <br />
+                <br /> 
           </div>
     </div>
-        <div class="row">
-          <div class="col-md-12">
-                <ul class="list-margin">
-                    <% if @listings.present? %>
-                          <% @listings.each do |listing| %>
-                              <li>
-                                <span>
-                                  <%= listing.created_at.strftime('%B %d, %Y') %>
-                                </span> 
+    <div class="row">
+         <div class="col-md-12">
+              <ul class="list-margin">
+                  <% if @listings.present? %>
+                        <% @listings.each do |listing| %>
+                           <li>
+                              <span>
+                                <%= listing.created_at.strftime('%B %d, %Y') %>
+                              </span> 
                                 <%= link_to listing.name, listing %> - (<%= listing.city %>, <%= listing.state %>)
                                </li>
                     <% end %>

@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
   
   def index
+    @listings = Listing.all
   end
 
   def new
@@ -16,6 +17,7 @@ class ListingsController < ApplicationController
   
   def show
     @listings = Listing.find(params[:id])
+    @category = Category.find(params[:id])
   end
   
   private
