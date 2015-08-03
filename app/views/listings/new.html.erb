@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'listings.js' %>
 <div class="container">
      <div class="row">
           <div class="col-md-12, col-md-offset-3">
@@ -6,31 +7,21 @@
                 <br />
           </div>
      </div>
+     <div class="container">
      <div class="row">
-          <div class="col-md-12" col-md-offset-3">
-              <%= form_for @listings do |f| %>
-              <pre>
-                  <%= f.label :name %>
+          <div class="col-md-12">
+              <%= bootstrap_form_for(@listings, layout: :horizontal, control_col: "col-sm-8") do |f| %>
                   <%= f.text_field :name %>
-                  <br />
-                  <%= f.label :description %>
                   <%= f.text_area :description %>
-                  <br />
-                  <%= f.label :city %>
+                  <%= f.select :category_id, Category.all.map { |f| [f.name, f.id]} %>
+                  <%= f.select :subcategory_id, options_for_select([]) %>
                   <%= f.text_field :city %>
-                  <br />
-                  <%= f.label :state %>
                   <%= f.text_field :state %>
-                  <br />
-                  <%= f.label :zipcode %>
                   <%= f.text_field :zipcode, class: "zip-width", maxlength: "5" %>
-                  <br />
-                  <%= f.label :sideoftown %>
                   <%= f.text_field :sideoftown %>
-                  <br />
                   <%= f.submit class: 'btn btn-primary' %>
                   <% end %>
-                </pre>
           </div>
+     </div>
      </div>
 </div>

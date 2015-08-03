@@ -16,4 +16,8 @@ class CategoriesController < ApplicationController
     @real_estate = @categories[37]
   end
   
+  def show
+    @listings = Listing.where(category_id: params[:id])
+  end
+  
 end   

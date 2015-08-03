@@ -31,14 +31,14 @@
                </div>
           </div>
           <div class="col-md-3 col-md-offset-1">
-               <center><%= link_to 'Advertising Firms' %></center>  
+               <center><%= link_to 'Advertising Firms', category_path(@advertising_firms) %></center>  
                <div class="row h6">
                      <table class="table table-striped">
                             <tr>
                                 <td>
                                   <% @advertising_firms.subcategories.each do |subcategory| %>
                                      <ul>
-                                       <li><%= link_to subcategory.name %></li>
+                                       <li><%= link_to subcategory.name, category_subcategory_path(@advertising_firms, subcategory) %></li>
                                      </ul>
                                   <% end %>
                                 </td>

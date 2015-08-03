@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20150802144030) do
     t.string   "sideoftown"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
+    t.integer  "subcategory_id"
   end
 
   create_table "seotags", force: true do |t|

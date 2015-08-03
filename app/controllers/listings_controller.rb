@@ -11,7 +11,7 @@ class ListingsController < ApplicationController
   def create
     @listings = Listing.new(listings_params)
     @listings.save
-    redirect_to root_path
+    redirect_to @listings
   end
   
   def show
@@ -21,7 +21,7 @@ class ListingsController < ApplicationController
   private
   
   def listings_params
-    params.require(:listing).permit(:name, :description, :city, :state, :zipcode, :sideoftown)
+    params.require(:listing).permit(:name, :description, :city, :state, :zipcode, :sideoftown, :category_id, :subcategory_id)
   end
   
 end 
