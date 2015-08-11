@@ -20,11 +20,11 @@
                           <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand" href="#"><%= link_to 'Home', root_path, :class => "navbar-brand" %></a>
-                  <a class="navbar-brand" href="#"><%= link_to 'My Listings', new_user_session_path, :class => "navbar-brand" %></a>
-                  <a class="navbar-brand" href="#"><%= link_to 'Edit Listings', listings_path, :class => "navbar-brand" %></a>
+                  <a class="navbar-brand" href="#"><%= link_to 'My Listings', mylistings_path, :class => "navbar-brand" %></a>
+                  <a class="navbar-brand" href="#"><%= link_to 'Latest Listings', listings_path, :class => "navbar-brand" %></a>
                   <a class="navbar-brand" href="#"><%= link_to 'Make A Listing', new_listing_path, :class => "navbar-brand" %></a>
                   <a class="navbar-brand" href="#"><%= link_to 'Settings', edit_user_registration_path, :class => "navbar-brand" %></a>
-                  <a class="navbar-brand" href="#"><%= link_to 'Billing', new_listing_path, :class => "navbar-brand" %></a>
+                  <a class="navbar-brand" href="#"><%= link_to 'Billing', root_path, :class => "navbar-brand" %></a>
                   <a class="navbar-brand" href="#"><%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => "navbar-brand" %></a>
              </div>
          </nav>

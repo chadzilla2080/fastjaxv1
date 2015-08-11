@@ -26,6 +26,8 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'bootstrap_form'
 # This is the login system
 gem 'devise'
+#This is for uploading pics
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
